@@ -51,7 +51,7 @@ foreach($all as $ev) { //debug($ev);
     }
     
     $eventCreator = $friendsArr[$ev['Event']['uid']]['username'];
-    if($ev['Event']['covered'] > 0) {
+    if($ev['Event']['covered'] > 0) { // TODO: more to come ... stay tuned :D
         $eventCover = $friendsArr[$ev['Event']['covered']]['username'];
     }
     $eventEdit = '';
@@ -62,6 +62,12 @@ foreach($all as $ev) { //debug($ev);
         $eventEdit .= '</div>';
     }
     
+    if($ev['Event']['is_private']) {
+        $privateStyle = 'style="opacity:0.1"';
+    } else {
+        $privateStyle = '';
+    }
+    
 //    debug($friendsArr);
 ?>
 
@@ -69,7 +75,7 @@ foreach($all as $ev) { //debug($ev);
     <div class="panel-body">
         <h5>
             <span class="label label-primary custom-text-label"><?php echo $eventCreator; ?></span>
-            <span class="date"><strong><?php echo $date; ?></strong></span>
+            <span class="date" <?php echo $privateStyle; ?>><strong><?php echo $date; ?></strong></span>
         </h5>
         <div class="details">
             <hr/>

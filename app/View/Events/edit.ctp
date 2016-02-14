@@ -120,7 +120,13 @@
                 $friends = true;
                 $emailC = 'checked';
                 $emailD = 'disabled';
+                if($event['is_private']) {
+                    $privateC = 'checked';
+                } else {
+                    $privateC = '';
+                }
             }
+//            echo 'pc='.$privateC;die;
         ?>
         <div class="center-block">
             <textarea class="form-control" rows="3" id="description"><?php echo $event['description']; ?></textarea>
