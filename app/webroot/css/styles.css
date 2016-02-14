@@ -1,0 +1,21 @@
+#container {max-width: 600px; min-width: 200px; margin: 2px auto;}
+.nav-menu {padding: 0px 3% 0px 3%}
+.covered {max-width: 24%; float: left; margin-right: 10px; /*display: none*/}
+.desc {float: right; margin-top: -10px; /*text-align: justify*/}
+.date {float: right; text-align: right}
+.custom-text-label {font-size: 120%}
+.panel {margin-bottom: 5px; border-color: #aaa; /*background: rgb(204, 255, 255); background: rgba(204, 255, 255, 0.2)*/}
+.panel-danger {background: rgb(217,83,79); background: rgba(217,83,79, 0.4)}
+.panel-success {background: rgb(92,184,92); background: rgba(92,184,92, 0.4);}
+.details {display: none}
+.center-block {text-align: center;}
+.center-block h5 {text-align: left; padding-left: 10%;}
+.form-select {width: 35%; min-width: 15%; display: inline-block}
+.users {max-width: 19%; }
+#users-place {float:left; width: 80%; text-align: left; padding-top: 6px;}
+#users-place span {margin-right: 5px;}
+.bottom-buttons {margin: 10px 10px}
+.list-group-item.active, .list-group-item.active:focus, .list-group-item.active:hover {background-color: rgba(230,152,237,0.4); border-color: rgba(230,152,237,0.4);}
+.centered .list-group-item {text-align: center}
+.users-place-list {text-align: left; margin-bottom: 20px;}
+.users-place-list span {margin-right: 5px;}

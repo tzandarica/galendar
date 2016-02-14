@@ -1,0 +1,775 @@
+2016-02-13 16:09:09 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /galendar/app/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 /var/www/html/galendar/app/index.php(17): require('/var/www/html/g...')
+#4 {main}
+2016-02-13 16:30:40 Error: [MissingActionException] Action AppController::index() could not be found.
+Exception Attributes: array (
+  'controller' => 'AppController',
+  'action' => 'index',
+)
+Request URL: /galendar/app/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(AppController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 /var/www/html/galendar/app/index.php(17): require('/var/www/html/g...')
+#4 {main}
+2016-02-13 16:48:53 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 16:52:32 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 16:53:56 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 16:58:59 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 16:59:08 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:07:52 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:08:16 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:08:27 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:08:27 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:08:53 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:10:23 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:10:24 Error: [MissingControllerException] Controller class GalendarController could not be found.
+Exception Attributes: array (
+  'class' => 'GalendarController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/index.php/galendar/
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 /var/www/html/galendar/index.php(41): require('/var/www/html/g...')
+#2 {main}
+2016-02-13 17:12:47 Error: [MissingControllerException] Controller class EventsController could not be found.
+Exception Attributes: array (
+  'class' => 'EventsController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/events
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-13 17:38:42 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.theme.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:38:42 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.structure.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:38:42 Error: [MissingActionException] Action EventsController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'js',
+)
+Request URL: /galendar/events/js/jquery-ui/jquery-ui.min.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:38:42 Error: [MissingActionException] Action EventsController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'js',
+)
+Request URL: /galendar/events/js/add.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:00 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.theme.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:00 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.structure.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:09 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.theme.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:09 Error: [MissingActionException] Action EventsController::css() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'css',
+)
+Request URL: /galendar/events/css/jquery-ui/jquery-ui.structure.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:09 Error: [MissingActionException] Action EventsController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'js',
+)
+Request URL: /galendar/events/js/jquery-ui/jquery-ui.min.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:39:09 Error: [MissingActionException] Action EventsController::js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'js',
+)
+Request URL: /galendar/events/js/add.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:40:21 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.theme.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:40:21 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.structure.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:40:21 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.min.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:40:21 Error: [MissingActionException] Action EventsController::add.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.js',
+)
+Request URL: /galendar/events/add.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:42:15 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.theme.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:42:15 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.min.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:42:15 Error: [MissingActionException] Action EventsController::jquery-ui() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'jquery-ui',
+)
+Request URL: /galendar/events/jquery-ui/jquery-ui.structure.min.css
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 17:42:15 Error: [MissingActionException] Action EventsController::add.js() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.js',
+)
+Request URL: /galendar/events/add.js
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 18:01:34 Error: [MissingActionException] Action EventsController::events() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'events',
+)
+Request URL: /galendar/events/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-13 18:18:27 Error: [PDOException] SQLSTATE[42S22]: Column not found: 1054 Unknown column 'Array' in 'field list'
+Request URL: /galendar/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('INSERT INTO `ga...', Array)
+#2 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(1012): DboSource->execute('INSERT INTO `ga...')
+#3 /var/www/html/galendar/lib/Cake/Model/Model.php(1928): DboSource->create(Object(Event), Array, Array)
+#4 /var/www/html/galendar/lib/Cake/Model/Model.php(1751): Model->_doSave(Array, Array)
+#5 /var/www/html/galendar/app/Controller/EventsController.php(41): Model->save(Array)
+#6 [internal function]: EventsController->add()
+#7 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#8 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#9 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#10 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
+2016-02-14 11:22:02 Error: [MissingViewException] View file "Events/get_friends.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/get_friends.ctp',
+)
+Request URL: /galendar/events/getFriends
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 11:22:02 Error: [MissingViewException] View file "Events/get_friends.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/get_friends.ctp',
+)
+Request URL: /galendar/events/getFriends
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 11:22:03 Error: [MissingViewException] View file "Events/get_friends.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/get_friends.ctp',
+)
+Request URL: /galendar/events/getFriends
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 11:31:57 Error: [MissingViewException] View file "Users/populate_table.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Users/populate_table.ctp',
+)
+Request URL: /galendar/users/populateTable
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 12:31:50 Error: [MissingActionException] Action EventsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'index.html',
+)
+Request URL: /galendar/events/index.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 12:32:00 Error: [MissingActionException] Action EventsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'index.html',
+)
+Request URL: /galendar/events/index.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 12:36:58 Error: [MissingViewException] View file "Events/list_view.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/list_view.ctp',
+)
+Request URL: /galendar/events/listView
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 12:45:50 Error: [MissingActionException] Action EventsController::add.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.html',
+)
+Request URL: /galendar/events/add.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 12:47:46 Error: [MissingActionException] Action EventsController::add.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.html',
+)
+Request URL: /galendar/events/add.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 12:47:51 Error: [MissingActionException] Action EventsController::add.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.html',
+)
+Request URL: /galendar/events/add.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 13:12:19 Error: Fatal Error (4): syntax error, unexpected ')' in [/var/www/html/galendar/app/View/Events/all.ctp, line 19]
+2016-02-14 13:12:19 Error: [FatalErrorException] syntax error, unexpected ')'
+Request URL: /galendar/events/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/g...', 19)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/g...', 19, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/g...', 19, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-14 13:47:58 Error: Fatal Error (4): syntax error, unexpected '']'' (T_CONSTANT_ENCAPSED_STRING) in [/var/www/html/galendar/app/View/Events/all.ctp, line 29]
+2016-02-14 13:47:58 Error: [FatalErrorException] syntax error, unexpected '']'' (T_CONSTANT_ENCAPSED_STRING)
+Request URL: /galendar/events/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(4, 'syntax error, u...', '/var/www/html/g...', 29)
+#1 [internal function]: ErrorHandler::handleError(4, 'syntax error, u...', '/var/www/html/g...', 29, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 4, 'syntax error, u...', '/var/www/html/g...', 29, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-14 15:00:15 Error: [MissingActionException] Action EventsController::add.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'add.html',
+)
+Request URL: /galendar/events/add.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 15:57:41 Error: [MissingActionException] Action EventsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'index.html',
+)
+Request URL: /galendar/events/index.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 15:57:49 Error: [MissingActionException] Action EventsController::listView() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'listView',
+)
+Request URL: /galendar/events/listView
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 16:16:00 Error: [MissingActionException] Action EventsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'index.html',
+)
+Request URL: /galendar/events/index.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 17:30:50 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/add
+Stack Trace:
+#0 [internal function]: EventsController->edit('add')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 17:49:06 Error: [MissingActionException] Action EventsController::index.html() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'index.html',
+)
+Request URL: /galendar/events/index.html
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 18:07:12 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/edit
+Stack Trace:
+#0 [internal function]: EventsController->edit('edit')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 18:07:55 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 18:23:46 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 18:30:54 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-14 18:35:19 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 19:04:41 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'friends))' at line 1
+Request URL: /galendar/events/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Event`....', Array)
+#2 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Event`....', false)
+#4 /var/www/html/galendar/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Event), Array)
+#5 /var/www/html/galendar/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /var/www/html/galendar/app/Controller/EventsController.php(97): Model->find('all', Array)
+#7 [internal function]: EventsController->all()
+#8 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#11 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-02-14 19:05:10 Error: [PDOException] SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'friends))' at line 1
+Request URL: /galendar/events/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(460): PDOStatement->execute(Array)
+#1 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(426): DboSource->_execute('SELECT `Event`....', Array)
+#2 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(668): DboSource->execute('SELECT `Event`....', Array, Array)
+#3 /var/www/html/galendar/lib/Cake/Model/Datasource/DboSource.php(1106): DboSource->fetchAll('SELECT `Event`....', false)
+#4 /var/www/html/galendar/lib/Cake/Model/Model.php(3022): DboSource->read(Object(Event), Array)
+#5 /var/www/html/galendar/lib/Cake/Model/Model.php(2994): Model->_readDataSource('all', Array)
+#6 /var/www/html/galendar/app/Controller/EventsController.php(97): Model->find('all', Array)
+#7 [internal function]: EventsController->all()
+#8 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#9 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#10 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#11 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2016-02-14 19:29:10 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/delete
+Stack Trace:
+#0 [internal function]: EventsController->edit('delete')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 19:29:26 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/delete
+Stack Trace:
+#0 [internal function]: EventsController->delete()
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 19:30:33 Error: [MissingViewException] View file "Events/delete.ctp" is missing.
+Exception Attributes: array (
+  'file' => 'Events/delete.ctp',
+)
+Request URL: /galendar/events/delete/14
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/View.php(470): View->_getViewFileName(NULL)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 20:06:17 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-14 20:08:00 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 20:08:26 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 20:08:46 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/events/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('events', 'all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 20:33:16 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-14 20:43:12 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/events/edit/events/all
+Stack Trace:
+#0 [internal function]: EventsController->edit('events', 'all')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-14 20:43:28 Error: [MissingActionException] Action EventsController::events() could not be found.
+Exception Attributes: array (
+  'controller' => 'EventsController',
+  'action' => 'events',
+)
+Request URL: /galendar/events/events/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-14 20:44:05 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-14 20:47:39 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2016-02-14 20:48:25 Error: [MissingControllerException] Controller class AllController could not be found.
+Exception Attributes: array (
+  'class' => 'AllController',
+  'plugin' => NULL,
+)
+Request URL: /galendar/all
+Stack Trace:
+#0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
