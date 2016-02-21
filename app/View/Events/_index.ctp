@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default nav-menu">
     <div class="navbar-header pull-left">
-        <a href="#" class="btn btn-warning navbar-btn"><span class="glyphicon glyphicon-off"></span></a>
+        <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')); ?>" class="btn btn-warning navbar-btn"><span class="glyphicon glyphicon-off"></span></a>
     </div>
     <div class="navbar-header pull-right">
         <a href="<?php echo $this->Html->url(array('action' => 'add')); ?>" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-plus"> Add</span></a>

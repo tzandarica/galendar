@@ -29,9 +29,22 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class EventsController extends AppController {
-
-    public function index() {
-        echo 'index';
+    
+    public function beforeFilter() {
+        parent::beforeFilter();
+        $this->checkLogin();
+    }
+    
+    public function checkLogin() {
+        if(!is_null($this->Session)) {
+            if($this->Session->read('user_token') !== '' && intval($this->Session->read('user_id')) > 0) {
+                return true;
+            } else {
+                return $this->redirect(array('controller' => 'users', 'action' => 'login'));
+            }
+        } else {
+            return $this->redirect(array('controller' => 'users', 'action' => 'login'));
+        }
     }
 
     /*
@@ -46,7 +59,7 @@ class EventsController extends AppController {
     public function add() {
         $request = $this->request;
         $hours = array();
-        $uid = 3; // TODO: get from session
+        $uid = intval($this->Session->read('user_id'));
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
@@ -74,23 +87,38 @@ class EventsController extends AppController {
             $this->Event->save();
         }
     }
-
+    
     public function all() {
-        $uid = 3; // TODO: get from session
-
-        if ($this->request->is('post')) {
-            $req = $this->request;
-            debug($req);
-        }
+        $uid = intval($this->Session->read('user_id'));
 
         $conditions = array(
             'deleted' => 0,
-            'OR' => array('uid' => $uid, 'FIND_IN_SET ('.$uid.', friends)')
+//            'OR' => array('uid' => $uid, 'FIND_IN_SET ('.$uid.', friends)')
         );
+        
+        if (!empty($this->request->query)){
+            $data = $this->request->query;
+            $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
+            $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
 
-        $all = $this->Event->find('all', array('conditions' => $conditions));
+            if($data['friends'] !== '') {
+                $conditions[] = 'FIND_IN_SET ('.intval($data['friends']).', friends)';
+            }
+            
+            $conditions['event_from <='] = $event_from;
+            $conditions['event_to >='] = $event_to;
+        }
+        
+        $conditions['OR'] = array('uid' => $uid, 'FIND_IN_SET ('.$uid.', friends)');
+
+        $all = $this->Event->find('all', array('conditions' => $conditions, 'order' => 'event_from'));
         $this->set('all', $all);
 
+        for ($i = 8; $i <= 23; $i++) {
+            $hours[] = $i;
+        }
+        $this->set('hours', $hours);
+        
         $friends = $this->getFriends(true);
         $this->set('friendsArr', $friends);
     }
@@ -116,7 +144,7 @@ class EventsController extends AppController {
         
         $request = $this->request;
         $hours = array();
-        $uid = 3; // TODO: get from session
+        $uid = intval($this->Session->read('user_id'));
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
@@ -155,8 +183,9 @@ class EventsController extends AppController {
         $res = array();
         $conditions = array('deleted' => 0);
         
+        
         if ($uid) { // $uid = session user id
-            $uid = 3; //TODO: luat din sesiune 
+            $uid = intval($this->Session->read('user_id'));
             $conditions['id !='] = $uid;
         }
 

@@ -19,6 +19,8 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 date_default_timezone_set('Europe/Bucharest');
+//error_reporting(E_ALL);
+//ini_set("display_errors", 1);
 App::uses('Controller', 'Controller');
 
 /**
@@ -31,4 +33,5 @@ App::uses('Controller', 'Controller');
  * @link		http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
+    var $components = array('Session');
 }

@@ -217,7 +217,9 @@
  *
  */
 	Configure::write('Session', array(
-		'defaults' => 'php'
+		'defaults' => 'php',
+//                'cookie' => 'galendar',
+                'timeout' => 1440 //1 day
 	));
 
 /**

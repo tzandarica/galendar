@@ -1,4 +1,5 @@
 #container {max-width: 600px; min-width: 200px; margin: 2px auto;}
+.message {text-align: center; color: red; margin-bottom: 10%}
 .nav-menu {padding: 0px 3% 0px 3%}
 .covered {max-width: 24%; float: left; margin-right: 10px; /*display: none*/}
 .desc {float: right; margin-top: -10px; /*text-align: justify*/}
@@ -19,3 +20,5 @@
 .centered .list-group-item {text-align: center}
 .users-place-list {text-align: left; margin-bottom: 20px;}
 .users-place-list span {margin-right: 5px;}
+#loginForm {width:75%; margin:0 auto; margin-top:5%; text-align: center}
+#loginForm input, #editForm input {margin-bottom:10%}

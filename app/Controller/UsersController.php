@@ -17,7 +17,6 @@
  * @since         CakePHP(tm) v 0.2.9
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-
 App::uses('AppController', 'Controller');
 
 /**
@@ -29,53 +28,13 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class UsersController extends AppController {
-    
-    public function index() {
-        echo 'index';
-    }
-    
-    public function add() {
-        $request = $this->request;
-        $hours = array();
-        
-        for($i = 8; $i <= 23; $i++) {
-            $hours[] = $i;
-        }
-        $this->set('hours', $hours);
-        
-        if($request->is('post')) {
-            $data = $request->data;
-            
-            $event_from = strtotime($data['from_date'] .' '. $data['from_hour']);
-            $event_to = strtotime($data['to_date'] .' '. $data['to_hour']);
-            $this->Event->set(array(
-                'event_from' => $event_from,
-                'event_to' => $event_to,
-                'friends' => $data['friends'],
-                'description' => $data['description'],
-                'is_private' => $data['is_private'],
-                'is_alert_mail' => $data['is_alert_mail']
-            ));
-//            debug($data);die;
-            
-            $this->Event->save($request->data);
-        }
-    }
-    
-    public function view() {
-        echo 'view';
-    }
-    
-    public function edit() {
-        echo 'update';
-    }
-    
+
     public function populateTable() {
         $this->autoRender = false;
         $this->layout = "";
         $this->User->query('TRUNCATE TABLE users');
         $this->User->query('ALTER TABLE users AUTO_INCREMENT = 1');
-        
+
         $data = array(
             array('username' => 'ada', 'password' => md5('golfee')),
             array('username' => 'deea', 'password' => md5('golfee')),
@@ -83,10 +42,70 @@ class UsersController extends AppController {
             array('username' => 'trd', 'password' => md5('golfee')),
             array('username' => 'xti', 'password' => md5('golfee'))
         );
-        
-        $this->User->saveMany($data);
 
+        $this->User->saveMany($data);
     }
-    
-    // public function delete
+
+    public function login() {
+        if ($this->request->is('post')) {
+            $data = $this->request->data;
+
+            $user = $data['User']['username'];
+            $pass = md5($data['User']['password']);
+            $conditions = array('username' => $user, 'password' => $pass);
+            $query = $this->User->find('first', array('conditions' => $conditions));
+
+            if (!empty($query)) {
+                $this->Session->write('user_id', $query['User']['id']);
+                $this->Session->write('user_token', md5($query['User']['username'] . $query['User']['password']));
+
+                return $this->redirect(array('controller' => 'events', 'action' => 'all'));
+            } else {
+                $this->Session->setFlash('Username / Password do not match!<br/>Try again.');
+            }
+        }
+    }
+
+    public function logout() {
+        $this->Session->destroy();
+
+        return $this->redirect('login');
+    }
+
+    public function edit() {
+        $id = intval($this->Session->read('user_id'));
+
+        $this->set('id', $id);
+
+        if ($this->request->is('post')) {
+            $data = $this->request->data;
+            $user = $this->User->find('first', array('conditions' => array('id' => $id)));
+            
+            if($data['User']['current_password'] == '' || $data['User']['new_password'] == '' || $data['User']['repeat_password'] == '') {
+                $this->Session->setFlash('All fields are mandatory');
+                return $this->redirect(array('action' => 'edit', $id));
+            }
+            
+            if(md5($data['User']['current_password']) !== $user['User']['password']) {
+                $this->Session->setFlash('Current password not correct');
+                return $this->redirect(array('action' => 'edit', $id));
+            } elseif ($data['User']['new_password'] !== $data['User']['repeat_password']) {
+                $this->Session->setFlash("New password / Repeat password don't match");
+                return $this->redirect(array('action' => 'edit', $id));
+            } else {
+                $userData = array(
+                    'id' => $id,
+                    'password' => md5($data['User']['new_password'])
+                );
+                
+                $this->User->set($userData);
+                $this->User->save();
+                
+                $this->Session->setFlash('Password changed');
+                
+                return $this->redirect(array('action' => 'edit', $id));
+            }
+        }
+    }
+
 }

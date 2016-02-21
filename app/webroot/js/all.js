@@ -1,5 +1,6 @@
 $(document).ready(function () {
     toggleList();
+    editView = false;
 });
 
 function toggleList() {
@@ -32,4 +33,14 @@ function toggleList() {
         this_bkp = this;
         op_bkp = op;
     });
+}
+$("#doSearch").click(function() {
+    $("#searchForm").submit();
+});
+$("#search").click(function() {
+    $("#searchBox").slideToggle();
+});
+
+function checkCheckboxes() {
+    // empty function - quick workaround :)
 }

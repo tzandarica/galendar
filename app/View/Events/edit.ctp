@@ -6,15 +6,16 @@
 
 <script type="text/javascript">
     var ids = [];
+    var page = 'edit';
 </script>
 
 <nav class="navbar navbar-default nav-menu">
     <div class="navbar-header pull-left">
-        <a href="#" class="btn btn-warning navbar-btn"><span class="glyphicon glyphicon-off"></span></a>
+        <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'logout')); ?>" class="btn btn-warning navbar-btn"><span class="glyphicon glyphicon-off"></span></a>
+        <a href="<?php echo $this->Html->url(array('controller' => 'users', 'action' => 'edit')); ?>" class="btn btn-default navbar-btn"><span class="glyphicon glyphicon-edit"></span></a>
     </div>
     <div class="navbar-header pull-right">
-        <a href="<?php echo $this->Html->url(array('action' => 'all')); ?>" class="btn btn-success navbar-btn"><span class="glyphicon glyphicon-home"> Home</span></a>
-        <a href="<?php echo $this->Html->url(array('action' => 'all')); ?>" class="btn btn-info navbar-btn"><span class="glyphicon glyphicon-th-list"> List</span></a>
+        <a href="<?php echo $this->Html->url(array('action' => 'all')); ?>" class="btn btn-info navbar-btn"><span class="glyphicon glyphicon-th-list"></span></a>
     </div>
 </nav>
 
@@ -87,8 +88,6 @@
                     }
                     echo $friends;
                 ?>
-                
-                <!--<span class="label label-primary custom-text-label">Xti</span>-->
             </div>
             <a href="#" id="add-users" class="btn btn-default users" data-toggle="modal" data-target="#friendsModal">
                 <span class="glyphicon glyphicon-user"></span>
@@ -126,7 +125,6 @@
                     $privateC = '';
                 }
             }
-//            echo 'pc='.$privateC;die;
         ?>
         <div class="center-block">
             <textarea class="form-control" rows="3" id="description"><?php echo $event['description']; ?></textarea>
@@ -165,9 +163,6 @@
         <div class="modal-content">
             <div class="modal-body">
                 <div class="list-group centered" id="friendsList">
-<!--                    <button type="button" class="list-group-item" value="1">
-                        <span class="label label-primary custom-text-label">Xti</span>
-                    </button>-->
                     <?php
                         foreach($friendsArr as $friend) {
                             $un = ucfirst($friend['username']);
@@ -186,13 +181,13 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <!--<button type="button" class="btn btn-primary">Save changes</button>-->
             </div>
         </div>
     </div>
 </div>
     
 <?php
+    echo $this->Html->script('common');
     echo $this->Html->script('add');
     echo $this->Html->script('jquery-ui/jquery-ui.min');
     echo $this->fetch('script');

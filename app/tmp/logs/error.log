@@ -773,3 +773,372 @@ Request URL: /galendar/all
 Stack Trace:
 #0 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #1 {main}
+2016-02-18 17:59:29 Error: Fatal Error (1): Call to a member function user() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 111]
+2016-02-18 17:59:29 Error: [FatalErrorException] Call to a member function user() on null
+Request URL: /galendar/users/login
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 111)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 111, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 111, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:56:29 Error: Fatal Error (1): Call to a member function check() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 70]
+2016-02-19 18:56:29 Error: [FatalErrorException] Call to a member function check() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:56:29 Error: Fatal Error (1): Call to a member function check() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 70]
+2016-02-19 18:56:29 Error: [FatalErrorException] Call to a member function check() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:57:16 Error: Fatal Error (1): Call to a member function check() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 70]
+2016-02-19 18:57:16 Error: [FatalErrorException] Call to a member function check() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:57:33 Error: Fatal Error (1): Call to a member function check() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 70]
+2016-02-19 18:57:33 Error: [FatalErrorException] Call to a member function check() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 70)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 70, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:58:42 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 18:58:42 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:59:09 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 18:59:09 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:59:11 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 18:59:11 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 18:59:13 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 18:59:13 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 19:36:32 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 19:36:32 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 19:44:59 Error: [MissingComponentException] Component class FlashComponent could not be found.
+Exception Attributes: array (
+  'class' => 'FlashComponent',
+  'plugin' => false,
+)
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('Flash', Array)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(EventsController))
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-19 19:46:01 Error: [MissingComponentException] Component class FlashComponent could not be found.
+Exception Attributes: array (
+  'class' => 'FlashComponent',
+  'plugin' => false,
+)
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Controller/ComponentCollection.php(53): ComponentCollection->load('Flash', Array)
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(643): ComponentCollection->init(Object(EventsController))
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(188): Controller->constructClasses()
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-19 19:47:20 Error: [MissingHelperException] Helper class FlashHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FlashHelper',
+  'plugin' => false,
+)
+Request URL: /galendar/users/login
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Flash')
+#1 /var/www/html/galendar/lib/Cake/View/View.php(848): HelperCollection->__isset('Flash')
+#2 /var/www/html/galendar/app/View/Users/login.ctp(18): View->__get('Flash')
+#3 /var/www/html/galendar/lib/Cake/View/View.php(961): include('/var/www/html/g...')
+#4 /var/www/html/galendar/lib/Cake/View/View.php(923): View->_evaluate('/var/www/html/g...', Array)
+#5 /var/www/html/galendar/lib/Cake/View/View.php(473): View->_render('/var/www/html/g...')
+#6 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-02-19 19:47:46 Error: [MissingHelperException] Helper class FlashHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FlashHelper',
+  'plugin' => false,
+)
+Request URL: /galendar/users/login
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Flash')
+#1 /var/www/html/galendar/lib/Cake/View/View.php(848): HelperCollection->__isset('Flash')
+#2 /var/www/html/galendar/app/View/Users/login.ctp(18): View->__get('Flash')
+#3 /var/www/html/galendar/lib/Cake/View/View.php(961): include('/var/www/html/g...')
+#4 /var/www/html/galendar/lib/Cake/View/View.php(923): View->_evaluate('/var/www/html/g...', Array)
+#5 /var/www/html/galendar/lib/Cake/View/View.php(473): View->_render('/var/www/html/g...')
+#6 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-02-19 19:47:46 Error: [MissingHelperException] Helper class FlashHelper could not be found.
+Exception Attributes: array (
+  'class' => 'FlashHelper',
+  'plugin' => false,
+)
+Request URL: /galendar/users/login
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/View/HelperCollection.php(63): HelperCollection->load('Flash')
+#1 /var/www/html/galendar/lib/Cake/View/View.php(848): HelperCollection->__isset('Flash')
+#2 /var/www/html/galendar/app/View/Users/login.ctp(18): View->__get('Flash')
+#3 /var/www/html/galendar/lib/Cake/View/View.php(961): include('/var/www/html/g...')
+#4 /var/www/html/galendar/lib/Cake/View/View.php(923): View->_evaluate('/var/www/html/g...', Array)
+#5 /var/www/html/galendar/lib/Cake/View/View.php(473): View->_render('/var/www/html/g...')
+#6 /var/www/html/galendar/lib/Cake/Controller/Controller.php(960): View->render(NULL, NULL)
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(200): Controller->render()
+#8 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#9 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#10 {main}
+2016-02-19 20:11:43 Error: Fatal Error (1): Call to undefined method EventsController::checkLogin() in [/var/www/html/galendar/app/Controller/EventsController.php, line 81]
+2016-02-19 20:11:43 Error: [FatalErrorException] Call to undefined method EventsController::checkLogin()
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to undefin...', '/var/www/html/g...', 81)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to undefin...', '/var/www/html/g...', 81, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to undefin...', '/var/www/html/g...', 81, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:16:15 Error: Fatal Error (1): Call to a member function read() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 120]
+2016-02-19 20:16:15 Error: [FatalErrorException] Call to a member function read() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 120)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 120, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 120, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:18:24 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:18:24 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:18:43 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:18:43 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:18:45 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:18:45 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:19:13 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:19:13 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:19:36 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:19:36 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:22:28 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:22:28 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:22:29 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:22:29 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:22:30 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:22:30 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-19 20:26:31 Error: Fatal Error (1): Call to a member function header() on null in [/var/www/html/galendar/lib/Cake/Controller/Controller.php, line 778]
+2016-02-19 20:26:31 Error: [FatalErrorException] Call to a member function header() on null
+Request URL: /galendar/
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 778)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 778, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-20 18:45:21 Error: Fatal Error (1): Call to a member function exists() on null in [/var/www/html/galendar/app/Controller/UsersController.php, line 76]
+2016-02-20 18:45:21 Error: [FatalErrorException] Call to a member function exists() on null
+Request URL: /galendar/users/edit/3
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Error/ErrorHandler.php(213): ErrorHandler::handleFatalError(1, 'Call to a membe...', '/var/www/html/g...', 76)
+#1 [internal function]: ErrorHandler::handleError(1, 'Call to a membe...', '/var/www/html/g...', 76, Array)
+#2 /var/www/html/galendar/lib/Cake/Core/App.php(931): call_user_func('ErrorHandler::h...', 1, 'Call to a membe...', '/var/www/html/g...', 76, Array)
+#3 /var/www/html/galendar/lib/Cake/Core/App.php(904): App::_checkFatalError()
+#4 [internal function]: App::shutdown()
+#5 {main}
+2016-02-20 18:45:35 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/users/edit/7
+Stack Trace:
+#0 [internal function]: UsersController->edit('7')
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-20 18:48:17 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/users/edit
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-20 18:48:30 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/users/edit
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
+2016-02-20 18:49:14 Error: [CakeException] Unknown status code
+Request URL: /galendar/users/edit/3
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Controller/Controller.php(791): CakeResponse->statusCode('3')
+#1 /var/www/html/galendar/app/Controller/UsersController.php(88): Controller->redirect('edit', '3')
+#2 [internal function]: UsersController->edit('3')
+#3 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#4 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#5 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#6 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#7 {main}
+2016-02-20 19:03:47 Error: [MissingActionException] Action UsersController::all() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'all',
+)
+Request URL: /galendar/users/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-20 19:04:20 Error: [MissingActionException] Action UsersController::all() could not be found.
+Exception Attributes: array (
+  'controller' => 'UsersController',
+  'action' => 'all',
+)
+Request URL: /galendar/users/all
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#1 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#2 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2016-02-20 19:05:49 Error: [NotFoundException] Invalid ID
+Request URL: /galendar/users/edit
+Stack Trace:
+#0 [internal function]: UsersController->edit()
+#1 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(UsersController), Array)
+#2 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#3 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest))
+#4 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#5 {main}
