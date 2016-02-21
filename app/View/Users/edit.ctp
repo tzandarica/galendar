@@ -26,6 +26,7 @@
     echo $this->Form->input('current_password', array('placeholder' => 'Current password', 'class' => 'form-control', 'type' => 'password', 'div' => 'col-sm-10'));
     echo $this->Form->input('new_password', array('placeholder' => 'New password', 'class' => 'form-control', 'type' => 'password', 'div' => 'col-sm-10'));
     echo $this->Form->input('repeat_password', array('placeholder' => 'Repeat new password', 'class' => 'form-control', 'type' => 'password', 'div' => 'col-sm-10'));
+    echo $this->Form->input('email', array('placeholder' => 'Email', 'class' => 'form-control', 'type' => 'text', 'div' => 'col-sm-10', 'value' => $email));
     echo $this->Form->input('Save', array('type' => 'submit', 'class' => 'btn btn-success', 'div' => 'col-sm-10'));
 ?>
 

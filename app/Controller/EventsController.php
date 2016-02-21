@@ -19,6 +19,7 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 App::uses('AppController', 'Controller');
+App::uses('CakeEmail', 'Network/Email');
 
 /**
  * Static content controller
@@ -29,15 +30,15 @@ App::uses('AppController', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers/pages-controller.html
  */
 class EventsController extends AppController {
-    
+
     public function beforeFilter() {
         parent::beforeFilter();
         $this->checkLogin();
     }
-    
+
     public function checkLogin() {
-        if(!is_null($this->Session)) {
-            if($this->Session->read('user_token') !== '' && intval($this->Session->read('user_id')) > 0) {
+        if (!is_null($this->Session)) {
+            if ($this->Session->read('user_token') !== '' && intval($this->Session->read('user_id')) > 0) {
                 return true;
             } else {
                 return $this->redirect(array('controller' => 'users', 'action' => 'login'));
@@ -56,6 +57,7 @@ class EventsController extends AppController {
      * 
      * 
      */
+
     public function add() {
         $request = $this->request;
         $hours = array();
@@ -71,7 +73,32 @@ class EventsController extends AppController {
 
         if ($request->is('post')) {
             $data = $request->data;
-
+            
+            if($data['is_alert_mail'] == 1) {
+                $receivers = array();
+                $f = $this->getFriends(true);
+                $exp = explode(',', $data['friends']);
+                foreach($f as $frnd) {
+                    $receivers['emails'][] = $frnd['email'];
+                    $receivers['users'][] = $frnd['username'];
+                }
+            }
+            
+            if($data['friends'] !== '') {
+                $receivers = array();
+                $f = $this->getFriends(true);
+                $exp = explode(',', $data['friends']);
+                foreach($exp as $frnd) {
+                    $receivers['emails'][] = $f[$frnd]['email'];
+                    $receivers['users'][] = $f[$frnd]['username'];
+                }
+            }
+            
+            if($data['is_alert_mail'] == 1) {
+                $receivers['emails'][] = $f[$uid]['email'];
+                $receivers['users'][] = $f[$uid]['username'];
+            }
+            
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
             $eventArr = array(
@@ -84,10 +111,15 @@ class EventsController extends AppController {
                 'uid' => $uid
             );
             $this->Event->set($eventArr);
+            if(!empty($receivers)) { 
+//                debug($receivers);die;
+                $this->email($receivers, $eventArr);
+            }
             $this->Event->save();
+            
         }
     }
-    
+
     public function all() {
         $uid = intval($this->Session->read('user_id'));
 
@@ -95,21 +127,22 @@ class EventsController extends AppController {
             'deleted' => 0,
 //            'OR' => array('uid' => $uid, 'FIND_IN_SET ('.$uid.', friends)')
         );
-        
-        if (!empty($this->request->query)){
+
+        if (!empty($this->request->query)) {
             $data = $this->request->query;
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
 
-            if($data['friends'] !== '') {
-                $conditions[] = 'FIND_IN_SET ('.intval($data['friends']).', friends)';
+            if ($data['friends'] !== '') {
+                $conditions[] = 'FIND_IN_SET (' . intval($data['friends']) . ', friends)';
             }
-            
+
             $conditions['event_from <='] = $event_from;
             $conditions['event_to >='] = $event_to;
         }
-        
-        $conditions['OR'] = array('uid' => $uid, 'FIND_IN_SET ('.$uid.', friends)');
+
+        $conditions['OR'] = array('uid' => $uid, 'FIND_IN_SET (' . $uid . ', friends)');
+        $conditions['OR'] = array('is_private' => 0, 'friends' => '');
 
         $all = $this->Event->find('all', array('conditions' => $conditions, 'order' => 'event_from'));
         $this->set('all', $all);
@@ -118,7 +151,7 @@ class EventsController extends AppController {
             $hours[] = $i;
         }
         $this->set('hours', $hours);
-        
+
         $friends = $this->getFriends(true);
         $this->set('friendsArr', $friends);
     }
@@ -127,7 +160,7 @@ class EventsController extends AppController {
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid ID'));
         }
-        
+
         $event = $this->Event->find('first', array('conditions' => array('id' => $id)));
         $eventData = array(
             'from_date' => date('d.m.Y', $event['Event']['event_from']),
@@ -141,7 +174,7 @@ class EventsController extends AppController {
             'uid' => $event['Event']['uid'],
         );
         $this->set('event', $eventData);
-        
+
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
@@ -168,12 +201,12 @@ class EventsController extends AppController {
                 'is_alert_mail' => $data['is_alert_mail'],
                 'uid' => $uid
             );
-            if(!is_null($id)) {
+            if (!is_null($id)) {
                 $eventArr['id'] = $id;
             }
             $this->Event->set($eventArr);
             $this->Event->save();
-            
+
             $this->redirect('all');
         }
     }
@@ -182,8 +215,8 @@ class EventsController extends AppController {
         $this->loadModel('User');
         $res = array();
         $conditions = array('deleted' => 0);
-        
-        
+
+
         if ($uid) { // $uid = session user id
             $uid = intval($this->Session->read('user_id'));
             $conditions['id !='] = $uid;
@@ -208,18 +241,56 @@ class EventsController extends AppController {
         return $user;
     }
 
-     public function delete($id = null) {
+    public function delete($id = null) {
         $this->autoRender = false;
         $this->layout = "";
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid ID'));
         }
-        
+
         $request = $this->request;
         if ($request->is('post')) {
             $eventArr = array('id' => $id, 'deleted' => 1);
             $this->Event->set($eventArr);
             $this->Event->save();
         }
-     }
+    }
+
+    public function email($receivers, $event) {
+        $Email = new CakeEmail();
+        $Email->config(array(
+//            'host' => 'ssl://smtp.gmail.com',
+//            'port' => 465,
+            'host' => 'mx1.hostinger.in',
+            'port' => 465,
+//  'host' => 'localhost',
+//  'port' => 369,
+//            'username' => 'golfeecluj@gmail.com',
+//            'password' => 'minigolfisfun',
+            'username' => 'contact@galendar.hol.es',
+            'password' => 'wicked',
+//            'transport' => 'Smtp',
+            'transport' => 'Mail',
+            'tls' => false,
+        ));
+
+        $Email->template('alert');
+        $Email->emailFormat('html')
+                ->to($receivers['emails'])
+                ->from(array('golfeecluj@gmail.com' => 'Golfee'))
+                ->sender('golfeecluj@gmail.com')
+                ->subject('Galendar alert')
+                ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'])));
+//                ->send();
+//        if ($Email->send($this->emailMarkersReplacer($isKonsis, $this->get_receipt(true, $id)))) {
+//            
+//        }
+        
+        if($Email->send()) {
+            echo 'send';die;
+        } else {
+            debug($Email);die;
+        }
+    }
+
 }

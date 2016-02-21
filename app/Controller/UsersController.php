@@ -74,37 +74,54 @@ class UsersController extends AppController {
 
     public function edit() {
         $id = intval($this->Session->read('user_id'));
+        $userData = array();
 
         $this->set('id', $id);
+        
+        $user = $this->User->find('first', array('conditions' => array('id' => $id)));
+        $this->set('email', $user['User']['email']);
 
         if ($this->request->is('post')) {
             $data = $this->request->data;
-            $user = $this->User->find('first', array('conditions' => array('id' => $id)));
             
-            if($data['User']['current_password'] == '' || $data['User']['new_password'] == '' || $data['User']['repeat_password'] == '') {
-                $this->Session->setFlash('All fields are mandatory');
-                return $this->redirect(array('action' => 'edit', $id));
+//            if($data['User']['current_password'] == '' || $data['User']['new_password'] == '' || $data['User']['repeat_password'] == '') {
+//                $this->Session->setFlash('All fields are mandatory');
+//                return $this->redirect(array('action' => 'edit', $id));
+//            }
+            
+            if($data['User']['current_password'] !== '') {
+                if(md5($data['User']['current_password']) !== $user['User']['password']) {
+                    $this->Session->setFlash('Current password not correct');
+                    return $this->redirect(array('action' => 'edit', $id));
+                } elseif ($data['User']['new_password'] !== $data['User']['repeat_password']) {
+                    $this->Session->setFlash("New password / Repeat password don't match");
+                    return $this->redirect(array('action' => 'edit', $id));
+                } else {
+                    $userData['id'] = $id;
+                    $userData['password'] = md5($data['User']['new_password']);
+                }     
+                $what = 'Password ';
             }
             
-            if(md5($data['User']['current_password']) !== $user['User']['password']) {
-                $this->Session->setFlash('Current password not correct');
-                return $this->redirect(array('action' => 'edit', $id));
-            } elseif ($data['User']['new_password'] !== $data['User']['repeat_password']) {
-                $this->Session->setFlash("New password / Repeat password don't match");
-                return $this->redirect(array('action' => 'edit', $id));
-            } else {
-                $userData = array(
-                    'id' => $id,
-                    'password' => md5($data['User']['new_password'])
-                );
+            if($data['User']['password'] !== '') {
+                if($data['User']['email'] !== $user['User']['email']) {
+                    $userData['id'] = $id;
+                    $userData['email'] = $data['User']['email'];
+                }
                 
-                $this->User->set($userData);
-                $this->User->save();
-                
-                $this->Session->setFlash('Password changed');
-                
-                return $this->redirect(array('action' => 'edit', $id));
+                $what = 'Email ';
             }
+            
+            if(isset($userData['password']) && isset($userData['email'])) {
+                $what = 'Password & Email ';
+            }
+            
+            $this->User->set($userData);
+            $this->User->save();
+
+            $this->Session->setFlash($what . 'changed');
+
+            return $this->redirect(array('action' => 'edit', $id));
         }
     }
 
