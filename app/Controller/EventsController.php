@@ -62,6 +62,7 @@ class EventsController extends AppController {
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
+        $this->set('me', $this->getFriend($uid));
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
