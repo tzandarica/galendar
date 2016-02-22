@@ -2,7 +2,7 @@
 //$e_date = date('l, d.m.Y', $mail['event']['event_from']) .' - '. date('l, d.m.Y', $mail['event']['event_to']);
 $e_desc = $mail['event']['description'];
 $e_with = '';
-debug($me);
+debug($mail);
 foreach($mail['users'] as $friend) {
     $e_with .= $friend . ', ';
 }

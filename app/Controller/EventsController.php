@@ -62,7 +62,6 @@ class EventsController extends AppController {
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
-        $this->set('me', $this->getFriend($uid));
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
@@ -273,6 +272,8 @@ class EventsController extends AppController {
             'transport' => 'Mail',
             'tls' => false,
         ));
+        
+        $uid = intval($this->Session->read('user_id'));
 
         $Email->template('alert');
         $Email->emailFormat('html')
@@ -280,7 +281,7 @@ class EventsController extends AppController {
                 ->from(array('golfeecluj@gmail.com' => 'Golfee'))
                 ->sender('golfeecluj@gmail.com')
                 ->subject('Galendar alert')
-                ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'])));
+                ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'], 'me' => $this->getFriend($uid))));
 //                ->send();
 //        
         $Email->send();
