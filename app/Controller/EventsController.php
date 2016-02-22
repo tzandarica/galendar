@@ -259,17 +259,17 @@ class EventsController extends AppController {
     public function email($receivers, $event) {
         $Email = new CakeEmail();
         $Email->config(array(
-//            'host' => 'ssl://smtp.gmail.com',
-//            'port' => 465,
-            'host' => 'mx1.hostinger.in',
+            'host' => 'ssl://smtp.gmail.com',
+            'port' => 465,
+//            'host' => 'mx1.hostinger.in',
 //  'host' => 'localhost',
 //  'port' => 369,
-//            'username' => 'golfeecluj@gmail.com',
-//            'password' => 'minigolfisfun',
-            'username' => 'contact@galendar.hol.es',
-            'password' => 'wicked',
-//            'transport' => 'Smtp',
-            'transport' => 'Mail',
+            'username' => 'golfeecluj@gmail.com',
+            'password' => 'minigolfisfun',
+//            'username' => 'contact@galendar.hol.es',
+//            'password' => 'wicked',
+            'transport' => 'Smtp',
+//            'transport' => 'Mail',
             'tls' => false,
         ));
         
