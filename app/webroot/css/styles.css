@@ -22,3 +22,5 @@
 .users-place-list span {margin-right: 5px;}
 #loginForm {width:75%; margin:0 auto; margin-top:5%; text-align: center}
 #loginForm input, #editForm input {margin-bottom:10%}
+
+a:visited, a:active, a:focus {color: #fff;}

@@ -1307,3 +1307,40 @@ Stack Trace:
 #7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
 #8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #9 {main}
+2016-02-22 18:21:51 Error: [SocketException] SMTP server did not accept the password.
+Request URL: /galendar/events/emailtest/gmail
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/SmtpTransport.php(96): SmtpTransport->_auth()
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(1161): SmtpTransport->send(Object(CakeEmail))
+#2 /var/www/html/galendar/app/Controller/EventsController.php(334): CakeEmail->send()
+#3 [internal function]: EventsController->emailtest('gmail')
+#4 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#5 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#7 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}
+2016-02-22 18:22:37 Error: [SocketException] SMTP timeout.
+Request URL: /galendar/events/emailtest/golfee
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/SmtpTransport.php(157): SmtpTransport->_smtpSend(NULL, '220')
+#1 /var/www/html/galendar/lib/Cake/Network/Email/SmtpTransport.php(95): SmtpTransport->_connect()
+#2 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(1161): SmtpTransport->send(Object(CakeEmail))
+#3 /var/www/html/galendar/app/Controller/EventsController.php(334): CakeEmail->send()
+#4 [internal function]: EventsController->emailtest('golfee')
+#5 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-02-22 18:22:54 Error: [SocketException] 
+Request URL: /galendar/events/emailtest/holes
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/MailTransport.php(51): MailTransport->_mail('kiddykornfreak@...', 'Galendar alert', '\n', 'From: Golfee <g...', NULL)
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(1161): MailTransport->send(Object(CakeEmail))
+#2 /var/www/html/galendar/app/Controller/EventsController.php(334): CakeEmail->send()
+#3 [internal function]: EventsController->emailtest('holes')
+#4 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#5 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#7 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#8 {main}

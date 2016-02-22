@@ -258,20 +258,22 @@ class EventsController extends AppController {
 
     public function email($receivers, $event) {
         $Email = new CakeEmail();
-        $Email->config(array(
-//            'host' => 'ssl://smtp.gmail.com',
-//            'port' => 465,
+        $Email->config(array( // email hosting galendar.hol.es
             'host' => 'mx1.hostinger.in',
-//  'host' => 'localhost',
-//  'port' => 369,
-//            'username' => 'golfeecluj@gmail.com',
-//            'password' => 'minigolfisfun',
             'username' => 'contact@galendar.hol.es',
             'password' => 'wicked',
-//            'transport' => 'Smtp',
             'transport' => 'Mail',
             'tls' => false,
         ));
+        
+//        $Email->config(array( // email gmail
+//            'host' => 'ssl://smtp.gmail.com',
+//            'port' => 465,
+//            'username' => 'golfeecluj@gmail.com',
+//            'password' => 'minigolfisfun',
+//            'transport' => 'Smtp',
+//            'tls' => false,
+//        ));
         
         $uid = intval($this->Session->read('user_id'));
 
@@ -282,6 +284,51 @@ class EventsController extends AppController {
                 ->sender('golfeecluj@gmail.com')
                 ->subject('Galendar alert')
                 ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'], 'me' => $this->getFriend($uid))));
+//                ->send();
+//        
+        $Email->send();
+    }
+    
+    public function emailtest($how) {
+        $this->autoRender = false;
+        $this->layout = "";
+        $Email = new CakeEmail();
+        if($how == 'holes') {
+            $Email->config(array( // email hosting galendar.hol.es
+                'host' => 'mx1.hostinger.in',
+                'username' => 'contact@galendar.hol.es',
+                'password' => 'wicked',
+                'transport' => 'Mail',
+                'tls' => false,
+            ));
+        } elseif($how == 'golfee') {
+            $Email->config(array( // email gmail
+                'host' => 'server-0066.whmpanels.com',
+                'port' => 465,
+                'username' => 'play@golfee.ro',
+                'password' => 'golf-fun-62',
+                'transport' => 'Smtp',
+                'tls' => false,
+            ));
+        } elseif($how == 'gmail') {
+            $Email->config(array( // email gmail
+                'host' => 'ssl://smtp.gmail.com',
+                'port' => 465,
+                'username' => 'golfeecluj@gmail.com',
+                'password' => 'minigolfisfun',
+                'transport' => 'Smtp',
+                'tls' => false,
+            ));
+        }
+        
+//        $Email->template('alert');
+        $Email->emailFormat('text')
+                ->to('kiddykornfreak@gmail.com')
+                ->from(array('golfeecluj@gmail.com' => 'Golfee'))
+                ->sender('golfeecluj@gmail.com')
+                ->subject('Galendar alert')
+                ->message($how);
+//                ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'], 'me' => $this->getFriend($uid))));
 //                ->send();
 //        
         $Email->send();
