@@ -111,12 +111,12 @@ class EventsController extends AppController {
                 'uid' => $uid
             );
             $this->Event->set($eventArr);
-            if(!empty($receivers)) { 
-//                debug($receivers);die;
-                $this->email($receivers, $eventArr);
-            }
             $this->Event->save();
             
+            if(!empty($receivers)) { 
+                debug($receivers);die;
+                $this->email($receivers, $eventArr);
+            }
         }
     }
 
@@ -286,11 +286,12 @@ class EventsController extends AppController {
 //            
 //        }
         
-        if($Email->send()) {
-            echo 'send';die;
-        } else {
-            debug($Email);die;
-        }
+//        if($Email->send()) {
+//            echo 'send';die;
+//        } else {
+//            debug($Email);die;
+//        }
+        $Email->send();
     }
 
 }
