@@ -262,7 +262,6 @@ class EventsController extends AppController {
 //            'host' => 'ssl://smtp.gmail.com',
 //            'port' => 465,
             'host' => 'mx1.hostinger.in',
-            'port' => 465,
 //  'host' => 'localhost',
 //  'port' => 369,
 //            'username' => 'golfeecluj@gmail.com',
