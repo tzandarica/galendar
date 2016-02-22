@@ -16,4 +16,4 @@ to:
 <br/><strong><?php echo date('l, d.m.Y', $mail['event']['event_to']); ?></strong>
 <br/><br/>width: 
 <br/><strong><?php echo rtrim($e_with !== '' ? $e_with : '-', ', '); ?></strong>
-<br/><br/>description: <i><?php echo $e_desc !== '' ? nl2br($e_desc) : '-'; ?></i>
+<br/><br/>description: "<i><?php echo $e_desc !== '' ? nl2br($e_desc) : '-'; ?></i>"
