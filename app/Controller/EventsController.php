@@ -319,6 +319,8 @@ class EventsController extends AppController {
                 'transport' => 'Smtp',
                 'tls' => false,
             ));
+        } elseif($how == '') {
+            die('no method received');
         }
         
 //        $Email->template('alert');
