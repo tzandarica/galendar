@@ -303,7 +303,7 @@ class EventsController extends AppController {
             ));
         } elseif($how == 'golfee') {
             $Email->config(array( // email gmail
-                'host' => 'server-0066.whmpanels.com',
+                'host' => 'ssl://server-0066.whmpanels.com',
                 'port' => 465,
                 'username' => 'play@golfee.ro',
                 'password' => 'golf-fun-62',
