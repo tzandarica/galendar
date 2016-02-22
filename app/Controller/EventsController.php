@@ -114,7 +114,7 @@ class EventsController extends AppController {
             $this->Event->save();
             
             if(!empty($receivers)) { 
-                debug($receivers);die;
+//                debug($receivers);die;
                 $this->email($receivers, $eventArr);
             }
         }
@@ -282,15 +282,7 @@ class EventsController extends AppController {
                 ->subject('Galendar alert')
                 ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'])));
 //                ->send();
-//        if ($Email->send($this->emailMarkersReplacer($isKonsis, $this->get_receipt(true, $id)))) {
-//            
-//        }
-        
-//        if($Email->send()) {
-//            echo 'send';die;
-//        } else {
-//            debug($Email);die;
-//        }
+//        
         $Email->send();
     }
 
