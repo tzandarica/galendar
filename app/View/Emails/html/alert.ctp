@@ -1,10 +1,9 @@
 <?php
-//$e_date = date('l, d.m.Y', $mail['event']['event_from']) .' - '. date('l, d.m.Y', $mail['event']['event_to']);
 $e_desc = $mail['event']['description'];
 $e_with = '';
 $dateFrom = date('l, d.m.Y - H:i:s', $mail['event']['event_from']);
 $dateTo = date('l, d.m.Y - H:i:s', $mail['event']['event_to']);
-//debug($mail);
+
 foreach($mail['users'] as $friend) {
     if($mail['me']['User']['username'] !== $friend) {
         $e_with .= $friend . ', ';
@@ -18,7 +17,7 @@ if(count($mail['users']) == 5) {
 
 
 <strong><?php echo $mail['me']['User']['username']?></strong> created an event 
-<br/>from:<br/><strong><?php echo $dateFrom; ?></strong>
+<br/><br/>from:<br/><strong><?php echo $dateFrom; ?></strong>
 <br/>
 to:
 <br/><strong><?php echo $dateTo; ?></strong>

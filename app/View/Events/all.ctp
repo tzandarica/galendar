@@ -36,7 +36,7 @@
                 if(isset($this->request->query['from_date'])) { 
                     $from_date = $this->request->query['from_date'];
                 } else {
-                    $from_date = Date('d.m.Y', strtotime("+3 days"));
+                    $from_date = Date('d.m.Y', time());
                 }
                 
                 if(isset($this->request->query['to_date'])) { 

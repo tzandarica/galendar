@@ -1,6 +1,7 @@
 $(document).ready(function () {
     toggleList();
     editView = false;
+    $("#dela").datepicker("option", {minDate: null});
 });
 
 function toggleList() {

@@ -14,7 +14,7 @@ $("#from-hours").change(function () {
 
 $(function () {
     $("#dela").datepicker({
-        defaultDate: "+3d",
+//        defaultDate: null,
         autoSize: true,
         dateFormat: "dd.mm.yy",
         minDate: 0,
@@ -29,7 +29,7 @@ $(function () {
         }
     });
     $("#panala").datepicker({
-        defaultDate: "+3d",
+//        defaultDate: "+3d",
         autoSize: true,
         dateFormat: "dd.mm.yy",
         minDate: $("#dela").val(),

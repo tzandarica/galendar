@@ -23,9 +23,9 @@
     <div class="panel-body">
         <div class="center-block">
             Data: <!-- value input => today + 3 days -->
-            <input type="text" class="btn btn-default form-select" value="<?php echo Date('d.m.Y', strtotime("+3 days")); ?>" id="dela" name="from" readonly>
+            <input type="text" class="btn btn-default form-select" value="<?php echo Date('d.m.Y', strtotime("+1 days")); ?>" id="dela" name="from" readonly>
             - 
-            <input type="text" class="btn btn-default form-select" value="<?php echo Date('d.m.Y', strtotime("+3 days")); ?>" id="panala" name="to" readonly>
+            <input type="text" class="btn btn-default form-select" value="<?php echo Date('d.m.Y', strtotime("+1 days")); ?>" id="panala" name="to" readonly>
         </div>
         <hr/>
         <div class="center-block">
