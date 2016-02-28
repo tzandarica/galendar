@@ -313,7 +313,7 @@ class EventsController extends AppController {
         $Email->template('alert');
         $Email->emailFormat('html')
                 ->to($receivers['emails'])
-                ->from(array($me['User']['email'] => $me['User']['username'] . ' - Golfee'))
+                ->from(array('golfeecluj@gmail.com' => $me['User']['username'] . ' - Golfee'))
                 ->sender('golfeecluj@gmail.com')
                 ->subject('Galendar alert')
                 ->viewVars(array('mail' => $vars));
