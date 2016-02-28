@@ -105,7 +105,7 @@ class EventsController extends AppController {
                 $this->email($receivers, $eventArr);
             }
             
-            return $this->redirect('all');
+            $this->redirect('all');
         }
     }
 
@@ -311,7 +311,7 @@ class EventsController extends AppController {
         $Email->emailFormat('html')
                 ->to($receivers['emails'])
                 ->from(array($me['User']['email'] => $me['User']['username'] . ' - Golfee'))
-                ->sender($me['User']['email'])
+                ->sender('golfeecluj@gmail.com')
                 ->subject('Galendar alert')
                 ->viewVars(array('mail' => $vars));
 //                ->send();

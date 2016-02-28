@@ -1,8 +1,8 @@
 <?php
 $e_desc = $mail['event']['description'];
 $e_with = '';
-$dateFrom = date('l, d.m.Y - H:i:s', $mail['event']['event_from']);
-$dateTo = date('l, d.m.Y - H:i:s', $mail['event']['event_to']);
+$dateFrom = date('l, d.m.Y - H:i', $mail['event']['event_from']);
+$dateTo = date('l, d.m.Y - H:i', $mail['event']['event_to']);
 
 foreach($mail['users'] as $friend) {
     if($mail['me']['User']['username'] !== $friend) {
