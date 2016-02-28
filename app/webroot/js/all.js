@@ -17,7 +17,7 @@ function toggleList() {
                 $(".date", this_bkp).css("opacity", "0.1");
             }
         }
-        if ($(".details", this).is(":visible")) { console.log("visible");
+        if ($(".details", this).is(":visible")) { //console.log("visible");
             $(".details", this).hide();
             $(".bottom-buttons", this).hide();
             if(op < 1) {
@@ -40,6 +40,12 @@ $("#doSearch").click(function() {
 });
 $("#search").click(function() {
     $("#searchBox").slideToggle();
+});
+
+$("#panala").click(function() {
+    if($("#dela") !== $("panala")) {
+        $("#to-hours option:last").prop("selected", true);
+    }
 });
 
 function checkCheckboxes() {

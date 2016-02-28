@@ -62,11 +62,8 @@ class EventsController extends AppController {
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
-
-        for ($i = 8; $i <= 23; $i++) {
-            $hours[] = $i;
-        }
-        $this->set('hours', $hours);
+        
+        $this->set('hours', $this->getHours());
 
         $friends = $this->getFriends(true, $uid);
         $this->set('friends', $friends);
@@ -121,34 +118,39 @@ class EventsController extends AppController {
         );
 
         if (!empty($this->request->query)) {
-            $data = $this->request->query;
+            $data = $this->request->query; //debug($data);die;
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
-
+            
+            if($event_from == $event_to) {
+                $hours = $this->getHours();
+                $event_from = strtotime($data['from_date'] . ' ' . $hours[0]);
+                $event_to = strtotime($data['to_date'] . ' ' . $hours[count($hours) - 1]);
+            }
+            
             if ($data['friends'] !== '') {
                 $conditions[] = 'FIND_IN_SET (' . intval($data['friends']) . ', friends)';
             }
 
-            $conditions['event_from <='] = $event_from;
-            $conditions['event_to >='] = $event_to;
+            $conditions['event_from >='] = $event_from;
+            $conditions['event_to <='] = $event_to;
+        } else {
+            $conditions['event_from >='] = strtotime(date('d.m.Y') . ' 00:00');
         }
 
-        $conditions['OR'] = array('uid' => $uid, 'FIND_IN_SET (' . $uid . ', friends)');
-        $conditions['OR'] = array('is_private' => 0, 'friends' => '');
-
+        $conditions[]['OR'] = array('uid' => $uid, 'FIND_IN_SET (' . $uid . ', friends)');
+        $conditions[]['OR'] = array('is_private' => 0, 'friends' => '');
+//debug($conditions);die;
         $all = $this->Event->find('all', array('conditions' => $conditions, 'order' => 'event_from'));
         $this->set('all', $all);
-
-        for ($i = 8; $i <= 23; $i++) {
-            $hours[] = $i;
-        }
-        $this->set('hours', $hours);
+        
+        $this->set('hours', $this->getHours());
 
         $friends = $this->getFriends(true);
         $this->set('friendsArr', $friends);
     }
 
-    public function edit($id = null) {
+    public function edit($id = null) { // TODO: text in email ca-i editat eventu, nu creat
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid ID'));
         }
@@ -171,10 +173,7 @@ class EventsController extends AppController {
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
 
-        for ($i = 8; $i <= 23; $i++) {
-            $hours[] = $i;
-        }
-        $this->set('hours', $hours);
+        $this->set('hours', $this->getHours());
 
         $friends = $this->getFriends(true, $uid);
         $this->set('friendsArr', $friends);
@@ -266,6 +265,15 @@ class EventsController extends AppController {
             $this->Event->set($eventArr);
             $this->Event->save();
         }
+    }
+    
+    public function getHours() {
+        $hours = array();
+        for ($i = 8; $i <= 23; $i++) {
+            $hours[] = $i;
+        }
+        
+        return $hours;
     }
 
     public function email($receivers, $event) {

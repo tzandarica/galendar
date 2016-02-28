@@ -67,7 +67,7 @@ $("#friendsList button").click(function () {
     }
     
 //    $("#friends_hidden").val(ids);
-    console.log(ids);
+//    console.log(ids);
 
     checkCheckboxes();
 });

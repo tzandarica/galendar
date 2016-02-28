@@ -60,20 +60,41 @@
                         } else {
                             $hour = $hour . ':00';
                         }
-                        echo '<option value="'.$hour.'">'.$hour.'</option>';
+                        if(isset($this->request->query['from_hour'])) { 
+                            if($hour == $this->request->query['from_hour']) {
+                                echo '<option value="'.$hour.'" selected>'.$hour.'</option>';
+                            } else {
+                                echo '<option value="'.$hour.'">'.$hour.'</option>';
+                            }
+                        } else {
+                            echo '<option value="'.$hour.'">'.$hour.'</option>';
+                        }
                     }
                 ?>
             </select> 
             - 
             <select class="form-control form-select" id="to-hours" name="to_hour">
                 <?php
-                    foreach($hours as $hour) {
+                    foreach($hours as $key => $hour) {
                         if($hour < 10) {
                             $hour = '0' . $hour . ':00';
                         } else {
                             $hour = $hour . ':00';
                         }
-                        echo '<option value="'.$hour.'">'.$hour.'</option>';
+                        
+                        if(isset($this->request->query['to_hour'])) { 
+                            if($hour == $this->request->query['to_hour']) {
+                                echo '<option value="'.$hour.'" selected>'.$hour.'</option>';
+                            } else {
+                                echo '<option value="'.$hour.'">'.$hour.'</option>';
+                            }
+                        } else {
+                            if($key == count($hours) - 1) {
+                                echo '<option value="'.$hour.'" selected>'.$hour.'</option>';
+                            } else {
+                                echo '<option value="'.$hour.'">'.$hour.'</option>';
+                            }
+                        }
                     }
                 ?>
             </select>
@@ -108,7 +129,7 @@ foreach($all as $ev) { //debug($ev);
     
     $panelClass = 'panel-default';
     if($ev['Event']['is_alert_mail'] && 
-            (in_array($me, explode(',', $friendsList)) || ($me == $ev['Event']['uid']))
+            (in_array($me, explode(',', $friendsList)))
         ) {
         $panelClass = 'panel-danger';
     }
@@ -173,7 +194,7 @@ foreach($all as $ev) { //debug($ev);
         </div>
     </div>
 </div>
-
+<?php } ?>
 <!-- Modal -->
 <div class="modal fade" id="friendsModal" tabindex="-1" role="dialog" aria-labelledby="friendsModalLabel">
     <div class="modal-dialog" role="document">
@@ -202,7 +223,6 @@ foreach($all as $ev) { //debug($ev);
 </div>
 
 <?php
-}
     echo $this->Html->script('common');
     echo $this->Html->script('all');
     echo $this->Html->script('jquery-ui/jquery-ui.min');

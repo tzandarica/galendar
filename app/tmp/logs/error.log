@@ -1344,3 +1344,55 @@ Stack Trace:
 #6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
 #7 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #8 {main}
+2016-02-28 13:21:10 Error: [SocketException] Invalid email: "%s"
+Request URL: /galendar/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail(NULL)
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(454): CakeEmail->_setEmail('_to', Array, NULL)
+#2 /var/www/html/galendar/app/Controller/EventsController.php(312): CakeEmail->to(Array)
+#3 /var/www/html/galendar/app/Controller/EventsController.php(105): EventsController->email(Array, Array)
+#4 [internal function]: EventsController->add()
+#5 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-02-28 13:21:33 Error: [SocketException] Invalid email: "%s"
+Request URL: /galendar/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail(NULL)
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(454): CakeEmail->_setEmail('_to', Array, NULL)
+#2 /var/www/html/galendar/app/Controller/EventsController.php(312): CakeEmail->to(Array)
+#3 /var/www/html/galendar/app/Controller/EventsController.php(105): EventsController->email(Array, Array)
+#4 [internal function]: EventsController->add()
+#5 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-02-28 13:22:35 Error: [SocketException] Invalid email: "%s"
+Request URL: /galendar/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail(NULL)
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(454): CakeEmail->_setEmail('_to', Array, NULL)
+#2 /var/www/html/galendar/app/Controller/EventsController.php(312): CakeEmail->to(Array)
+#3 /var/www/html/galendar/app/Controller/EventsController.php(105): EventsController->email(Array, Array)
+#4 [internal function]: EventsController->add()
+#5 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
+2016-02-28 13:22:45 Error: [SocketException] Invalid email: "%s"
+Request URL: /galendar/events/add
+Stack Trace:
+#0 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(592): CakeEmail->_validateEmail(NULL)
+#1 /var/www/html/galendar/lib/Cake/Network/Email/CakeEmail.php(454): CakeEmail->_setEmail('_to', Array, NULL)
+#2 /var/www/html/galendar/app/Controller/EventsController.php(312): CakeEmail->to(Array)
+#3 /var/www/html/galendar/app/Controller/EventsController.php(105): EventsController->email(Array, Array)
+#4 [internal function]: EventsController->add()
+#5 /var/www/html/galendar/lib/Cake/Controller/Controller.php(490): ReflectionMethod->invokeArgs(Object(EventsController), Array)
+#6 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(193): Controller->invokeAction(Object(CakeRequest))
+#7 /var/www/html/galendar/lib/Cake/Routing/Dispatcher.php(167): Dispatcher->_invoke(Object(EventsController), Object(CakeRequest))
+#8 /var/www/html/galendar/app/webroot/index.php(118): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#9 {main}
