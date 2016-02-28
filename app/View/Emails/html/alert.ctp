@@ -13,10 +13,16 @@ $e_with = rtrim($e_with, ', ');
 if(count($mail['users']) == 5) {
     $e_with = $e_with . ' (you all have this event)';    
 }
+
+if(isset($mail['edit']) && $mail['edit']) {
+    $verb = 'updated';
+} else {
+    $verb = 'created';
+}
 ?>
 
 
-<strong><?php echo $mail['me']['User']['username']?></strong> created an event 
+<strong><?php echo $mail['me']['User']['username']?></strong> <?php echo $verb; ?> an event 
 <br/><br/>from:<br/><strong><?php echo $dateFrom; ?></strong>
 <br/>
 to:

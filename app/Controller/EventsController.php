@@ -170,7 +170,6 @@ class EventsController extends AppController {
         $this->set('event', $eventData);
 
         $request = $this->request;
-        $hours = array();
         $uid = intval($this->Session->read('user_id'));
 
         $this->set('hours', $this->getHours());
@@ -215,7 +214,7 @@ class EventsController extends AppController {
             $this->Event->save();
             
             if(!empty($receivers)) { 
-                $this->email($receivers, $eventArr);
+                $this->email($receivers, $eventArr, true);
             }
 
             $this->redirect('all');
@@ -276,7 +275,7 @@ class EventsController extends AppController {
         return $hours;
     }
 
-    public function email($receivers, $event) {
+    public function email($receivers, $event, $isEdit = false) {
         $Email = new CakeEmail();
         $Email->config(array( // email hosting galendar.hol.es
             'host' => 'mx1.hostinger.in',
@@ -306,6 +305,10 @@ class EventsController extends AppController {
                     'users' => $receivers['users'], 
                     'me' => $me
                 );
+        
+        if($isEdit) {
+            $vars['edit'] = true;
+        }
         
         $Email->template('alert');
         $Email->emailFormat('html')

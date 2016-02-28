@@ -54,7 +54,7 @@ $("#save").click(function () {
         url: "add", // + getToken(true),
         data: data,
         success: function (data) {
-//            window.location.href = '../events/all';
+            window.location.href = '../events/all';
         }
     });
 });
