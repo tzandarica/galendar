@@ -62,7 +62,6 @@ class EventsController extends AppController {
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
-        $alertAll = false;
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
@@ -78,14 +77,12 @@ class EventsController extends AppController {
             
             if($data['is_alert_mail'] == 1) { // nu are cum sa fie si privat
                 if($data['friends'] !== '') {
-                    $alertAll = false;
                     $exp = explode(',', $data['friends']);
                     foreach($exp as $fid) {
                         $receivers['emails'][] = $friends[$fid]['email'];
                         $receivers['users'][] = $friends[$fid]['username'];
                     }
                 } else {
-                    $alertAll = true;
                     foreach($friends as $friend) {
                         $receivers['emails'][] = $friend['email'];
                         $receivers['users'][] = $friend['username'];
@@ -93,32 +90,6 @@ class EventsController extends AppController {
                 }
             }
             
-            /*
-            if($data['is_alert_mail'] == 1 && $data['friends'] == '') {
-                $exp = explode(',', $data['friends']);
-                foreach($friends as $frnd) {
-                    $receivers['emails'][] = $frnd['email'];
-                    $receivers['users'][] = $frnd['username'];
-                }
-                $alertAll = true;
-            }
-            
-            if($data['friends'] !== '') {
-                $f = $this->getFriends(true);
-                $exp = explode(',', $data['friends']);
-                foreach($exp as $frnd) {
-                    $receivers['emails'][] = $f[$frnd]['email'];
-                    $receivers['users'][] = $f[$frnd]['username'];
-                }
-                $alertAll = false;
-            }
-            
-            if($data['is_alert_mail'] == 1) {
-                $alertAll = true;
-//                $receivers['emails'][] = $friends[$uid]['email'];
-//                $receivers['users'][] = $friends[$uid]['username'];
-            }
-            */
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
             $eventArr = array(
@@ -134,9 +105,10 @@ class EventsController extends AppController {
             $this->Event->save();
             
             if(!empty($receivers)) { 
-//                debug($receivers);die;
-                $this->email($receivers, $eventArr, $alertAll);
+                $this->email($receivers, $eventArr);
             }
+            
+            return $this->redirect('all');
         }
     }
 
@@ -180,7 +152,7 @@ class EventsController extends AppController {
         if (!$this->Event->exists($id)) {
             throw new NotFoundException(__('Invalid ID'));
         }
-
+        
         $event = $this->Event->find('first', array('conditions' => array('id' => $id)));
         $eventData = array(
             'from_date' => date('d.m.Y', $event['Event']['event_from']),
@@ -209,6 +181,22 @@ class EventsController extends AppController {
 
         if ($request->is('post')) {
             $data = $request->data;
+            $receivers = array();
+
+            if($data['is_alert_mail'] == 1) { // nu are cum sa fie si privat
+                if($data['friends'] !== '') {
+                    $exp = explode(',', $data['friends']);
+                    foreach($exp as $fid) {
+                        $receivers['emails'][] = $friends[$fid]['email'];
+                        $receivers['users'][] = $friends[$fid]['username'];
+                    }
+                } else {
+                    foreach($friends as $friend) {
+                        $receivers['emails'][] = $friend['email'];
+                        $receivers['users'][] = $friend['username'];
+                    }
+                }
+            }
 
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
@@ -226,6 +214,10 @@ class EventsController extends AppController {
             }
             $this->Event->set($eventArr);
             $this->Event->save();
+            
+            if(!empty($receivers)) { 
+                $this->email($receivers, $eventArr);
+            }
 
             $this->redirect('all');
         }
@@ -276,7 +268,7 @@ class EventsController extends AppController {
         }
     }
 
-    public function email($receivers, $event, $alertAll) {
+    public function email($receivers, $event) {
         $Email = new CakeEmail();
         $Email->config(array( // email hosting galendar.hol.es
             'host' => 'mx1.hostinger.in',
@@ -304,8 +296,7 @@ class EventsController extends AppController {
         $vars = array(
                     'event' => $event, 
                     'users' => $receivers['users'], 
-                    'me' => $me,
-                    'all' => $alertAll
+                    'me' => $me
                 );
         
         $Email->template('alert');
