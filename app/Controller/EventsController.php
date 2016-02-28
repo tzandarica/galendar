@@ -105,8 +105,8 @@ class EventsController extends AppController {
                 $this->email($receivers, $eventArr);
             }
             
-        }
             $this->redirect('all');
+        }
     }
 
     public function all() {
