@@ -62,6 +62,7 @@ class EventsController extends AppController {
         $request = $this->request;
         $hours = array();
         $uid = intval($this->Session->read('user_id'));
+        $alertAll = false;
 
         for ($i = 8; $i <= 23; $i++) {
             $hours[] = $i;
@@ -73,32 +74,51 @@ class EventsController extends AppController {
 
         if ($request->is('post')) {
             $data = $request->data;
+            $receivers = array();
             
-            if($data['is_alert_mail'] == 1) {
-                $receivers = array();
-                $f = $this->getFriends(true);
-                $exp = explode(',', $data['friends']);
-                foreach($f as $frnd) {
-                    $receivers['emails'][] = $frnd['email'];
-                    $receivers['users'][] = $frnd['username'];
+            if($data['is_alert_mail'] == 1) { // nu are cum sa fie si privat
+                if($data['friends'] !== '') {
+                    $alertAll = false;
+                    $exp = explode(',', $data['friends']);
+                    foreach($exp as $fid) {
+                        $receivers['emails'][] = $friends[$fid]['email'];
+                        $receivers['users'][] = $friends[$fid]['username'];
+                    }
+                } else {
+                    $alertAll = true;
+                    foreach($friends as $friend) {
+                        $receivers['emails'][] = $friend['email'];
+                        $receivers['users'][] = $friend['username'];
+                    }
                 }
             }
             
+            /*
+            if($data['is_alert_mail'] == 1 && $data['friends'] == '') {
+                $exp = explode(',', $data['friends']);
+                foreach($friends as $frnd) {
+                    $receivers['emails'][] = $frnd['email'];
+                    $receivers['users'][] = $frnd['username'];
+                }
+                $alertAll = true;
+            }
+            
             if($data['friends'] !== '') {
-                $receivers = array();
                 $f = $this->getFriends(true);
                 $exp = explode(',', $data['friends']);
                 foreach($exp as $frnd) {
                     $receivers['emails'][] = $f[$frnd]['email'];
                     $receivers['users'][] = $f[$frnd]['username'];
                 }
+                $alertAll = false;
             }
             
             if($data['is_alert_mail'] == 1) {
-                $receivers['emails'][] = $f[$uid]['email'];
-                $receivers['users'][] = $f[$uid]['username'];
+                $alertAll = true;
+//                $receivers['emails'][] = $friends[$uid]['email'];
+//                $receivers['users'][] = $friends[$uid]['username'];
             }
-            
+            */
             $event_from = strtotime($data['from_date'] . ' ' . $data['from_hour']);
             $event_to = strtotime($data['to_date'] . ' ' . $data['to_hour']);
             $eventArr = array(
@@ -115,7 +135,7 @@ class EventsController extends AppController {
             
             if(!empty($receivers)) { 
 //                debug($receivers);die;
-                $this->email($receivers, $eventArr);
+                $this->email($receivers, $eventArr, $alertAll);
             }
         }
     }
@@ -256,7 +276,7 @@ class EventsController extends AppController {
         }
     }
 
-    public function email($receivers, $event) {
+    public function email($receivers, $event, $alertAll) {
         $Email = new CakeEmail();
         $Email->config(array( // email hosting galendar.hol.es
             'host' => 'mx1.hostinger.in',
@@ -276,14 +296,25 @@ class EventsController extends AppController {
 //        ));
         
         $uid = intval($this->Session->read('user_id'));
+        $me = $this->getFriend($uid);
 
+        $receivers['emails'][] = $me['User']['email'];
+        $receivers['users'][] = $me['User']['username'];
+        
+        $vars = array(
+                    'event' => $event, 
+                    'users' => $receivers['users'], 
+                    'me' => $me,
+                    'all' => $alertAll
+                );
+        
         $Email->template('alert');
         $Email->emailFormat('html')
                 ->to($receivers['emails'])
-                ->from(array('golfeecluj@gmail.com' => 'Golfee'))
-                ->sender('golfeecluj@gmail.com')
+                ->from(array($me['User']['email'] => $me['User']['username'] . ' - Golfee'))
+                ->sender($me['User']['email'])
                 ->subject('Galendar alert')
-                ->viewVars(array('mail' => array('event' => $event, 'users' => $receivers['users'], 'me' => $this->getFriend($uid))));
+                ->viewVars(array('mail' => $vars));
 //                ->send();
 //        
         $Email->send();

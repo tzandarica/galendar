@@ -51,17 +51,21 @@ class UsersController extends AppController {
             $data = $this->request->data;
 
             $user = $data['User']['username'];
-            $pass = md5($data['User']['password']);
-            $conditions = array('username' => $user, 'password' => $pass);
-            $query = $this->User->find('first', array('conditions' => $conditions));
+            if($user == 'juju') {
+                $pass = md5($data['User']['password']);
+                $conditions = array('username' => $user, 'password' => $pass);
+                $query = $this->User->find('first', array('conditions' => $conditions));
 
-            if (!empty($query)) {
-                $this->Session->write('user_id', $query['User']['id']);
-                $this->Session->write('user_token', md5($query['User']['username'] . $query['User']['password']));
+                if (!empty($query)) {
+                    $this->Session->write('user_id', $query['User']['id']);
+                    $this->Session->write('user_token', md5($query['User']['username'] . $query['User']['password']));
 
-                return $this->redirect(array('controller' => 'events', 'action' => 'all'));
+                    return $this->redirect(array('controller' => 'events', 'action' => 'all'));
+                } else {
+                    $this->Session->setFlash('Username / Password do not match!<br/>Try again.');
+                }
             } else {
-                $this->Session->setFlash('Username / Password do not match!<br/>Try again.');
+                $this->Session->setFlash('work in progress ... keep your idea ;)');
             }
         }
     }
