@@ -51,7 +51,7 @@ class UsersController extends AppController {
             $data = $this->request->data;
 
             $user = $data['User']['username'];
-            if($user == 'juju') {
+//            if($user == 'juju') { // for tests only
                 $pass = md5($data['User']['password']);
                 $conditions = array('username' => $user, 'password' => $pass);
                 $query = $this->User->find('first', array('conditions' => $conditions));
@@ -64,9 +64,9 @@ class UsersController extends AppController {
                 } else {
                     $this->Session->setFlash('Username / Password do not match!<br/>Try again.');
                 }
-            } else {
-                $this->Session->setFlash('work in progress ... keep your idea ;)');
-            }
+//            } else { // for tests only
+//                $this->Session->setFlash('work in progress ... keep your idea ;)');
+//            }
         }
     }
 
