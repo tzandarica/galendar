@@ -4,7 +4,7 @@ $(document).ready(function () {
     if (window.location.href.search('edit') == -1) {
         editView = false;
         $("#panala").prop("disabled", true);
-        $("#to-hours").prop("disabled", true);
+//        $("#to-hours").prop("disabled", true);
     }
     checkCheckboxes();
 });
